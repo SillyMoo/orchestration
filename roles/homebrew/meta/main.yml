@@ -1,0 +1,7 @@
+galaxy_info:
+  author: Chris Mills
+  description: Updates homebrew and installs essential taps
+
+  license: license (MIT)
+
+  min_ansible_version: 1.2

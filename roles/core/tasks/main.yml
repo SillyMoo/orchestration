@@ -1,3 +1,5 @@
+---
+# tasks file for core
 - name: Install Ubuntu-only core packages
   package: name={{ item }}
   when: is_ubuntu
@@ -49,4 +51,3 @@
 - name: Add homebrew zsh to /etc/shells
   lineinfile: dest=/etc/shells line='{{ bin_zsh.stdout }}'
   become: True
-

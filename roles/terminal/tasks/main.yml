@@ -1,4 +1,5 @@
 ---
+# tasks file for terminal
 - name: Install iterm2 mac
   homebrew_cask: name=iterm2
   when: is_osx
