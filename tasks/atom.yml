@@ -1,0 +1,4 @@
+---
+- name: Install atom OS x
+  homebrew_cask: name=atom
+  when: is_osx
