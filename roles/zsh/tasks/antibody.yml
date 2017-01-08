@@ -1,0 +1,13 @@
+---
+- name: Add Antigen tap
+  homebrew_tap: tap=getantibody/homebrew-antibody
+  when: is_osx
+- name: Install Antibody
+  package: name=antibody
+  when: is_osx
+- name: Create pre-bundle entries
+  template: src=pre-bundle.txt.j2 dest=~/.pre-bundle.txt
+  notify: "Install bundles"
+- name: Create post-bundle entries
+  template: src=post-bundle.txt.j2 dest=~/.post-bundle.txt
+  notify: "Install bundles"

@@ -1,0 +1,11 @@
+---
+# handlers file for zsh
+- name: Install pure
+  shell: antibody bundle sindresorhus/pure >> ~/.bundle.txt
+  listen: "Install bundles"
+- name: Install pre-bundle entries
+  shell: antibody bundle < ~/.pre-bundle.txt > ~/.bundle.txt
+  listen: "Install bundles"
+- name: Install post-bundle entries
+  shell: antibody bundle < ~/.post-bundle.txt >> ~/.bundle.txt
+  listen: "Install bundles"

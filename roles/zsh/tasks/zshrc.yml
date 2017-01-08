@@ -1,0 +1,13 @@
+---
+- name: Copy zshrc
+  copy: src=zshrc dest=~/.zshrc
+- name: Make .zsh folder
+  file: path=~/.zsh state=directory
+- name: Copy files
+  copy: src={{ item }} dest=~/.zsh/{{ item }}
+  with_items:
+    - completion.zsh
+    - config.zsh
+    - prompt.zsh
+    - window.zsh
+    - aliases.zsh

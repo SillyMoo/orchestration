@@ -10,5 +10,7 @@
   roles:
     - homebrew
     - core
+    - zsh
     - atom
     - terminal
+    - visual_studio_code
